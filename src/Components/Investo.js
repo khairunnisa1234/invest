@@ -62,8 +62,8 @@ function Investo() {
 
                             </td>
 
-
-                    <span style={{color:'red'}}> {values.allScans.intradayScans[0].scanShortcode} </span>
+                        
+                    {/* <span style={{color:'red'}}> {values.allScans.intradayScans[0].scanShortcode} </span> */}
 
     
 
