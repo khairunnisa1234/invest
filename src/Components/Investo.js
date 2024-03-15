@@ -83,10 +83,22 @@ function Investo() {
                             </td>
                             <td style={{ padding: "10px", textAlign: 'center' }}>{values.open}</td>
                             <td style={{ padding: "10px", textAlign: 'center' }}>{values.pctChange}</td>
+                            
+                            <td style={{ padding: "10px", textAlign: 'center' }}>
+    {values.low}{' '}
+    <input
+        type="text"
+        style={{
+            width: '90px',
+            borderRadius: '20px',
+            textAlign: 'center',
+            backgroundColor: values.high - values.low > 50 ? 'lightgreen' : 'inherit'
+        }}
+    />
+    {' '} {values.high}
+</td>
 
-                            <td style={{ padding: "10px",textAlign:'center'}}>
-                                {values.low} <span style={{ margin: '0 2px' }}><input type="text" style={{ width: '90px', borderRadius: '20px',textAlign:'center' }} /></span> {values.high}
-                            </td>
+
 
                             <td style={{ padding: "10px", fontSize: '13px', textAlign: 'center' }}>
                                 <span style={{ backgroundColor: values.openHighLowSignal === 'Open=Low' ? '#cefad0' : values.openHighLowSignal === 'Open=High' ? '#FF8A8A' : 'inherit', borderRadius: '80px', padding: '5px' }}>
