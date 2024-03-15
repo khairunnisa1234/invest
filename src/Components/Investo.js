@@ -56,14 +56,16 @@ function Investo() {
                     {table && table.map((values) => (
                         <tr key={values.symbol}>
                             <td style={{ padding: "10px" }}>
+                                <div style={{display:'flex',flexDirection:'row',textAlign:'center'}}>
                                 <input type="checkbox" style={{ marginRight: '5px' }} />
                                 <span style={{ color: 'blue' }}>{values.symbol} </span><FaRegChartBar style={{ marginLeft: '3rem', color: 'lightash' }} size={23} />
-
-
+                                </div>
+                                 
                             </td>
-
-                        
-                    {/* <span style={{color:'red'}}> {values.allScans.intradayScans[0].scanShortcode} </span> */}
+{/* 
+                     <div>
+                     <span style={{color:'red',marginBottom:'5px'}}> {values.allScans.intradayScans[0].scanShortcode} </span>
+                    </div>     */}
 
     
 
@@ -81,9 +83,11 @@ function Investo() {
                             </td>
                             <td style={{ padding: "10px", textAlign: 'center' }}>{values.open}</td>
                             <td style={{ padding: "10px", textAlign: 'center' }}>{values.pctChange}</td>
+
                             <td style={{ padding: "10px",textAlign:'center'}}>
                                 {values.low} <span style={{ margin: '0 2px' }}><input type="text" style={{ width: '90px', borderRadius: '20px',textAlign:'center' }} /></span> {values.high}
                             </td>
+
                             <td style={{ padding: "10px", fontSize: '13px', textAlign: 'center' }}>
                                 <span style={{ backgroundColor: values.openHighLowSignal === 'Open=Low' ? '#cefad0' : values.openHighLowSignal === 'Open=High' ? '#FF8A8A' : 'inherit', borderRadius: '80px', padding: '5px' }}>
                                     {values.openHighLowSignal === 'Open=Low' && <FaLevelUpAlt style={{ color: 'green' }} />}
